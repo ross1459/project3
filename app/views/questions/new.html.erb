@@ -1,0 +1,8 @@
+<!--Find me in app/views/questions/new.html.erb-->
+<% form_for :questions, :url => { :action => "create" } do |q| %>
+<%= q.label "New Question: " %>
+<%= q.text_field :question %><br>
+<%= q.label "Survey: " %>
+<%= q.text_field :survey %><br>
+<%= q.submit "Submit" %>
+<% end %>

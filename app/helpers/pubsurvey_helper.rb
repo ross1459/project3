@@ -1,0 +1,2 @@
+module PubsurveyHelper
+end

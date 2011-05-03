@@ -1,0 +1,8 @@
+<!--Find me in app/views/pubsurvey/index.html.erb-->
+
+<h1>Select a Survey</h1>
+<%= form_for :id, :url => {:action => "take"} do |f|%>
+<%= f.collection_select @UserSurveys, @surveys, :s_id, :name,
+options = {:prompt => "Choose a survey"}, :class => "suggestions" %><br />
+<%= f.submit "Submit" %><br>
+<% end %>

@@ -1,0 +1,8 @@
+<!-- app/views/pubsurvey/take.html.erb -->
+<%= @questions %>
+<%= form_for :questions, :url => {:action => "go"} do |f| %>
+  <%= @questions %><br />
+    <%= f.radio_button :ans, true %><%= f.label :a_text, "true" %>
+  <%= f.submit "Submit" %>
+<%end%>
+

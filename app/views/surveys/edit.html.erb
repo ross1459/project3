@@ -1,0 +1,7 @@
+<!-- app/views/survey/edit.html.erb -->
+<%= form_for @UserSurveys, :url => { :action => "update" } do |f| %>
+  <%= f.label "Name:" %>
+  <%= f.text_field :name %><br>
+  <%= f.hidden_field :s_id %>
+  <%= f.submit "submit" %>
+<% end %>

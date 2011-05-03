@@ -1,0 +1,8 @@
+<!--Find me in app/views/questions/chooseQuestion.html.erb-->
+<h1>Select a Question</h1>
+<%= form_for :id, :url => {:action => "edit"} do |f|%>
+<%= f.collection_select @userSurveys, @surveys, :s_id, :name,
+options = {:prompt => "Choose a question"}, :class => "questions" %><br />
+<%= f.submit "Submit" %><br>
+<%= link_to "Make New Question", :controller => "questions", :action => "new" %>
+<% end %>

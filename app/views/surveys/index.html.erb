@@ -1,0 +1,15 @@
+<!-- app/views/surveys/index.html.erb -->
+<h1>Select a Survey to Edit</h1>
+<%= form_for :id, :url => {:action => "edit"} do |f|%>
+<%= f.collection_select @userSurveys, @surveys, :s_id, :name,
+options = {:prompt => "Choose a survey"}, :class => "suggestions" %><br />
+<%= f.submit "Submit" %><br>
+<%end%>
+<%= link_to "Make New Survey", :controller => "surveys", :action => "new" %><br><br>
+<%= link_to "Add New Question", :controller => "questions", :action => "new" %><br><br>
+<h1>View Results of a Survey</h1>
+<%= form_for :id, :url => {:action => "view"} do |f|%>
+<%= f.collection_select @userSurveys, @surveys, :s_id, :name,
+options = {:prompt => "Choose a survey"}, :class => "suggestions" %><br />
+<%= f.submit "Submit" %><br>
+<% end %>

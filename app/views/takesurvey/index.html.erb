@@ -1,0 +1,11 @@
+<!--Find me in app/views/takesurvey/index.html.erb-->
+<table border="1">
+  <tr>
+    <td>Question</td>
+  </tr>
+  <% @questions.each do |s| %>
+    <tr>
+      <td><%= s.question %></td>
+    </tr>
+  <% end %>
+</table>
